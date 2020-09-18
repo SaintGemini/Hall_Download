@@ -18,3 +18,14 @@ docker run -d \
 hall_downloader:latest
 ```
 
+START
+
+`docker start hall_downloader`
+
+REMOVE
+
+`docker container rm hall_downloader`
+
+DELETE
+
+`docker rmi hall_downloader:latest`
