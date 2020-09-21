@@ -13,10 +13,12 @@ import (
 
 func getFile(vol string) {
 	// Make HTTP request
-	response, err := http.Get(vol)
+	client := &http.Client{}
+	response, err := client.Get(vol)
 	if err != nil {
 		log.Fatal(err)
 	}
+	response.Header.Set("Content-Type", "text/pdf")
 	defer response.Body.Close()
 
 	var name string
